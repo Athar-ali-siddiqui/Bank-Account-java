@@ -5,8 +5,25 @@ import java.util.*;
 
 
 class Main{ //main class
-
+  
   public static void main(String[] args) {
+    // ArrayList<Transaction> a = new ArrayList<>();
+    // a.add( new Transaction('W', 1000, 440));
+    // a.add(new Transaction('D', 9000, 90));
+    // a.add(new Transaction('D', 9067090, 11190));
+
+    // // System.out.println(a.get(0).toString());
+    // // System.out.println(a.get(1));
+    // // System.out.println(a.get(2));
+
+    // Transaction.printTransactionsDetail(a);
+
+
+
+
+
+
+    
     Scanner in = new Scanner(System.in);
    
     byte choice ;
@@ -15,7 +32,7 @@ class Main{ //main class
     while (true) {
       System.out.println(Arrays.toString(Account.getAccountsArray()));
       System.out.print
-      ("\nMain Menu          0: To Exit\n1: Check balance \n2: Deposit \n3: Withdraw \n4: Create Account\nEnter Choice :");
+      ("\nMain Menu          0: To Exit\n1: Check balance \n2: Deposit \n3: Withdraw \n4: Create Account\n5: Transactions Details\nEnter Choice :");
       choice = in.nextByte();
       if(choice != 0 && choice != 4){
         System.out.print("Enter Account id: ");
@@ -37,10 +54,15 @@ class Main{ //main class
       else if(choice == 4){
         Account.accountsMenu();
       }
+      else if (choice == 5){
+        System.out.println(a.toString());
+        Transaction.printTransactionsDetail(a.transactions);
+      }
       else{
         continue;
       }
 
     }
   }
+
 }

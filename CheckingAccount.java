@@ -1,7 +1,7 @@
 class CheckingAccount extends Account{
   
-    CheckingAccount( double bal) {
-      super(bal);
+    CheckingAccount( double bal,String name){
+      super(bal,name);
       //TODO Auto-generated constructor stub
     }
     @Override
@@ -11,6 +11,7 @@ class CheckingAccount extends Account{
       }
       else{
         this.bal -= amount;
+        transactions.add(new Transaction('W', this.bal, amount));
       }
     }
   

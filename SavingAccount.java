@@ -1,11 +1,9 @@
-import java.util.*;
-
 
 class SavingAccount extends Account{
   private double timeInterval;
   private StopWatch watch;
-  SavingAccount(double bal) {
-    super(bal);
+  SavingAccount(double bal,String name){
+    super(bal,name);
     this.watch = new StopWatch();
 
     //TODO Auto-generated constructor stub
@@ -29,6 +27,7 @@ class SavingAccount extends Account{
   public void deposit(double amount){
     this.savingAccountInterest();
     this.bal += amount;
+    transactions.add(new Transaction('D', this.bal, amount));
   }
   @Override
   public void withdraw(double amount){
@@ -42,6 +41,7 @@ class SavingAccount extends Account{
     }
     else{
       this.bal -= amount;
+      transactions.add(new Transaction('W', this.bal, amount));
     }
   }
 }
