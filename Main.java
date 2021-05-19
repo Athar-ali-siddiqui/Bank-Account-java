@@ -7,23 +7,7 @@ import java.util.*;
 class Main{ //main class
   
   public static void main(String[] args) {
-    // ArrayList<Transaction> a = new ArrayList<>();
-    // a.add( new Transaction('W', 1000, 440));
-    // a.add(new Transaction('D', 9000, 90));
-    // a.add(new Transaction('D', 9067090, 11190));
-
-    // // System.out.println(a.get(0).toString());
-    // // System.out.println(a.get(1));
-    // // System.out.println(a.get(2));
-
-    // Transaction.printTransactionsDetail(a);
-
-
-
-
-
-
-    
+  
     Scanner in = new Scanner(System.in);
    
     byte choice ;
